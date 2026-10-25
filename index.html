@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#fffefa">
+<meta name="description" content="A fast, mobile-friendly small business website with WhatsApp ordering.">
+<title>Olive & Ember — Small Business Demo</title>
+<style>
+:root{--accent:#b9472f;--ink:#211f1c;--muted:#6d6963;--line:#e9e4dd;--paper:#fffefa;--soft:#f5f0e9;--max:1120px}
+*{box-sizing:border-box}body{margin:0;background:var(--paper);color:var(--ink);font:16px/1.55 Arial,Helvetica,sans-serif}img{display:block;width:100%;object-fit:cover}a{color:inherit}.wrap{width:min(var(--max),calc(100% - 40px));margin:auto}
+.topbar{position:sticky;top:0;z-index:10;background:rgba(255,254,250,.98);border-bottom:1px solid var(--line)}.topbar-inner{min-height:68px;display:flex;align-items:center;justify-content:space-between;gap:16px}.brand{text-decoration:none;font-size:1.15rem;font-weight:800;letter-spacing:-.035em}.brand-mark{color:var(--accent)}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:12px 18px;border-radius:7px;border:1px solid var(--accent);background:var(--accent);color:white;text-decoration:none;font-weight:700;font-size:.95rem;text-align:center}.btn.secondary{background:transparent;color:var(--ink);border-color:#d8d0c7}.btn.small{min-height:42px;padding:9px 13px;font-size:.9rem}
+.hero{padding:38px 0 66px}.hero-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}.eyebrow{color:var(--accent);text-transform:uppercase;font-size:.76rem;letter-spacing:.12em;font-weight:800}h1,h2,h3,p{margin-top:0}h1{font-size:clamp(2.5rem,5.3vw,4.5rem);letter-spacing:-.065em;line-height:.99;margin:13px 0 18px;max-width:11ch}h2{font-size:clamp(1.8rem,3.4vw,2.7rem);letter-spacing:-.05em;line-height:1.1;margin-bottom:12px}h3{font-size:1.05rem;margin-bottom:6px}.lead{font-size:1.12rem;color:var(--muted);max-width:42ch}.hero-actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:25px}.hero-photo{height:min(560px,57vw);min-height:330px;border-radius:12px;background:var(--soft)}
+.section{padding:64px 0;border-top:1px solid var(--line)}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:28px}.section-head p{max-width:42ch;color:var(--muted);margin-bottom:0}.menu-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:28px 20px}.item-photo{aspect-ratio:4/3;border-radius:8px;background:var(--soft);margin-bottom:14px}.item-top{display:flex;justify-content:space-between;align-items:start;gap:12px}.price{font-weight:800;white-space:nowrap;color:var(--accent)}.item p{color:var(--muted);font-size:.94rem;margin:4px 0 12px}.order-link{font-size:.9rem;color:var(--accent);font-weight:800;text-underline-offset:3px}
+.about-grid{display:grid;grid-template-columns:1fr .8fr;align-items:center;gap:48px}.owner-photo{aspect-ratio:4/5;max-height:480px;border-radius:10px;background:var(--soft)}.about-copy p{color:var(--muted);max-width:56ch}
+.hours-grid{display:grid;grid-template-columns:.8fr 1fr;gap:48px;align-items:start}.hours-table{width:100%;border-collapse:collapse}.hours-table td{padding:12px 0;border-bottom:1px solid var(--line)}.hours-table td:last-child{text-align:right;font-weight:700}.contact-line{margin:18px 0 0}.contact-line a{color:var(--accent);font-weight:700;text-underline-offset:3px}.map{width:100%;height:260px;border:0;border-radius:9px;background:var(--soft)}
+.reviews-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}.review{border:1px solid var(--line);border-radius:9px;padding:22px}.review blockquote{margin:0 0 14px;font-size:1.02rem}.review cite{font-style:normal;font-size:.9rem;color:var(--muted);font-weight:700}
+footer{background:var(--soft);padding:30px 0}.footer-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:18px}.footer-links{display:flex;gap:18px;flex-wrap:wrap}.footer-links a{font-weight:700;text-decoration:none}.footer-address{color:var(--muted);font-size:.9rem}
+@media(max-width:760px){.wrap{width:calc(100% - 32px)}.topbar-inner{min-height:64px}.hero{padding:24px 0 44px}.hero-grid,.about-grid,.hours-grid{grid-template-columns:1fr;gap:25px}.hero-grid{display:flex;flex-direction:column-reverse;align-items:stretch}.hero-photo{height:66vw;min-height:235px;max-height:390px}.section{padding:46px 0}.section-head{display:block}.section-head p{margin-top:10px}.menu-grid,.reviews-grid{grid-template-columns:1fr;gap:26px}.item-photo{aspect-ratio:16/10}.owner-photo{max-height:360px;aspect-ratio:5/4}.footer-inner{align-items:flex-start;flex-direction:column}h1{max-width:12ch}}
+@media(min-width:761px) and (max-width:980px){.menu-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero-grid{gap:26px}}
+</style></head>
+<body>
+<script>
+/* Edit this single object to customise the template for each client. */
+const BUSINESS={
+ name:"Olive & Ember",category:"Neighbourhood kitchen",tagline:"Fresh plates, generous portions, and good food made with care.",accent:"#b9472f",
+ whatsapp:"2348012345678",phoneDisplay:"+234 801 234 5678",phoneLink:"+2348012345678",
+ address:"12 Example Street, Ikeja, Lagos",instagram:"https://instagram.com/",mapSearch:"12 Example Street, Ikeja, Lagos",
+ heroImage:"https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=1100&q=75",
+ ownerImage:"https://images.unsplash.com/photo-1556761175-b413da4baf72?auto=format&fit=crop&w=700&q=75",
+ about:["We’re a small neighbourhood kitchen serving comforting meals with fresh ingredients.","Everything is prepared with care, from weekday lunches to relaxed weekend dinners.","Send us a WhatsApp message and we’ll help you choose something you’ll love."],
+ hours:[["Monday","10:00 am – 8:00 pm"],["Tuesday","10:00 am – 8:00 pm"],["Wednesday","10:00 am – 8:00 pm"],["Thursday","10:00 am – 8:00 pm"],["Friday","10:00 am – 9:00 pm"],["Saturday","11:00 am – 9:00 pm"],["Sunday","12:00 pm – 6:00 pm"]],
+ menu:[
+ {name:"Jollof rice & chicken",price:"₦4,500",description:"Smoky party-style rice with grilled chicken.",image:"https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=700&q=70"},
+ {name:"Grilled chicken bowl",price:"₦5,500",description:"Seasoned chicken with rice and fresh sides.",image:"https://images.unsplash.com/photo-1546069901-ba9599a7e63c?auto=format&fit=crop&w=700&q=70"},
+ {name:"Pasta special",price:"₦4,000",description:"A rich, savoury sauce tossed with pasta.",image:"https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=70"},
+ {name:"Beef burger",price:"₦5,000",description:"A juicy burger with crisp lettuce and sauce.",image:"https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=70"},
+ {name:"Loaded fries",price:"₦3,000",description:"Golden fries with our house seasoning.",image:"https://images.unsplash.com/photo-1573080496219-bb080dd4f877?auto=format&fit=crop&w=700&q=70"},
+ {name:"Fresh fruit bowl",price:"₦2,500",description:"A refreshing mix of seasonal fruit.",image:"https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=700&q=70"}],
+ reviews:[] // Add only real, approved customer reviews; empty hides the section.
+};
+document.documentElement.style.setProperty("--accent",BUSINESS.accent);
+const wa=message=>`https://wa.me/${BUSINESS.whatsapp}?text=${encodeURIComponent(message)}`;
+const safe=value=>String(value).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+</script>
+<header class="topbar"><div class="wrap topbar-inner"><a class="brand" id="brand" href="#top"></a><a class="btn small" id="topWhatsApp" target="_blank" rel="noopener">WhatsApp us</a></div></header>
+<main id="top">
+<section class="hero"><div class="wrap hero-grid"><div><div class="eyebrow" id="category"></div><h1 id="heroTitle"></h1><p class="lead" id="tagline"></p><div class="hero-actions"><a class="btn" id="heroOrder" target="_blank" rel="noopener">Order on WhatsApp</a><a class="btn secondary" href="#menu">See the menu</a></div></div><img class="hero-photo" id="heroImage" alt="Featured product from the business" fetchpriority="high"></div></section>
+<section class="section" id="menu"><div class="wrap"><div class="section-head"><div><div class="eyebrow">Made with care</div><h2>Menu favourites</h2></div><p>Choose what you’re in the mood for, then message us to place your order.</p></div><div class="menu-grid" id="menuGrid"></div></div></section>
+<section class="section" id="about"><div class="wrap about-grid"><div class="about-copy"><div class="eyebrow">A little about us</div><h2>Good products. Good people.</h2><div id="aboutText"></div><a class="btn" id="aboutOrder" target="_blank" rel="noopener">Talk to us on WhatsApp</a></div><img class="owner-photo" id="ownerImage" alt="Business owner" loading="lazy"></div></section>
+<section class="section" id="visit"><div class="wrap hours-grid"><div><div class="eyebrow">Come by</div><h2>Hours & location</h2><table class="hours-table"><tbody id="hoursRows"></tbody></table><p class="contact-line" id="addressLine"></p><p class="contact-line" id="phoneLine"></p><a class="btn secondary" id="directions" target="_blank" rel="noopener">Get directions</a></div><div><iframe class="map" id="map" title="Map showing business location" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div></div></section>
+<section class="section" id="reviewsSection"><div class="wrap"><div class="section-head"><div><div class="eyebrow">From our customers</div><h2>Kind words</h2></div><p id="reviewIntro">Customer feedback will appear here when available.</p></div><div class="reviews-grid" id="reviewsGrid"></div></div></section>
+</main>
+<footer><div class="wrap footer-inner"><div><a class="brand" id="footerBrand" href="#top"></a><div class="footer-address" id="footerAddress"></div></div><nav class="footer-links" aria-label="Footer links"><a id="instagram" target="_blank" rel="noopener">Instagram</a><a id="footerWhatsApp" target="_blank" rel="noopener">WhatsApp</a><a href="#visit">Address & hours</a></nav></div></footer>
+<script>
+const byId=id=>document.getElementById(id),setLink=(id,href,text)=>{const el=byId(id);el.href=href;if(text)el.textContent=text;};
+document.title=`${BUSINESS.name} — ${BUSINESS.category}`;
+byId("brand").innerHTML=`${safe(BUSINESS.name)}<span class="brand-mark">.</span>`;byId("footerBrand").innerHTML=`${safe(BUSINESS.name)}<span class="brand-mark">.</span>`;
+byId("category").textContent=BUSINESS.category;byId("heroTitle").textContent=BUSINESS.name;byId("tagline").textContent=BUSINESS.tagline;byId("heroImage").src=BUSINESS.heroImage;byId("ownerImage").src=BUSINESS.ownerImage;
+setLink("topWhatsApp",wa("Hello! I'd like to make an enquiry."),"WhatsApp us");setLink("heroOrder",wa("Hello! I'd like to place an order."));setLink("aboutOrder",wa("Hello! I'd like to know more."));setLink("footerWhatsApp",wa("Hello! I'd like to make an enquiry."));setLink("instagram",BUSINESS.instagram);
+byId("addressLine").innerHTML=`<strong>Address:</strong> ${safe(BUSINESS.address)}`;byId("phoneLine").innerHTML=`<strong>Phone:</strong> <a href="tel:${safe(BUSINESS.phoneLink)}">${safe(BUSINESS.phoneDisplay)}</a>`;byId("footerAddress").textContent=BUSINESS.address;
+setLink("directions",`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(BUSINESS.mapSearch)}`);byId("map").src=`https://maps.google.com/maps?q=${encodeURIComponent(BUSINESS.mapSearch)}&output=embed`;
+byId("aboutText").innerHTML=BUSINESS.about.map(line=>`<p>${safe(line)}</p>`).join("");byId("hoursRows").innerHTML=BUSINESS.hours.map(([day,time])=>`<tr><td>${safe(day)}</td><td>${safe(time)}</td></tr>`).join("");
+byId("menuGrid").innerHTML=BUSINESS.menu.map(item=>`<article class="item"><img class="item-photo" loading="lazy" src="${safe(item.image)}" alt="${safe(item.name)}"><div class="item-top"><h3>${safe(item.name)}</h3><span class="price">${safe(item.price)}</span></div><p>${safe(item.description)}</p><a class="order-link" target="_blank" rel="noopener" href="${wa(`Hello! I'd like to order ${item.name}.`)}">Order this on WhatsApp →</a></article>`).join("");
+if(BUSINESS.reviews.length){byId("reviewIntro").textContent="A few words shared by our customers.";byId("reviewsGrid").innerHTML=BUSINESS.reviews.slice(0,3).map(review=>`<article class="review"><blockquote>“${safe(review.quote)}”</blockquote><cite>— ${safe(review.name)}</cite></article>`).join("");}else{byId("reviewsSection").hidden=true;}
+</script></body></html>
