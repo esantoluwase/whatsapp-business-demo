@@ -1,115 +1,14 @@
-
+// Demo property data. Replace these sample listings and image URLs with approved agency listings.
 const properties = [
-  {
-    id: "p1",
-    title: "3 Bed Townhouse with Courtyard",
-    suburb: "Brunswick East",
-    price: 780000,
-    beds: 3,
-    baths: 2,
-    type: "Townhouse",
-    image: "https://picsum.photos/800/600?random=1",
-    description: "Renovated townhouse, north-facing courtyard, walk to the tram."
-  },
-  {
-    id: "p2",
-    title: "Luxury Family Home",
-    suburb: "Brighton",
-    price: 1450000,
-    beds: 4,
-    baths: 3,
-    type: "House",
-    image: "https://picsum.photos/800/600?random=2",
-    description: "Beautiful family home with spacious interiors and a landscaped garden."
-  },
-  {
-    id: "p3",
-    title: "Modern City Apartment",
-    suburb: "Melbourne CBD",
-    price: 520000,
-    beds: 2,
-    baths: 1,
-    type: "Apartment",
-    image: "https://picsum.photos/800/600?random=3",
-    description: "Contemporary apartment close to shopping, restaurants and transport."
-  },
-  {
-    id: "p4",
-    title: "Contemporary 5 Bedroom Residence",
-    suburb: "Doncaster",
-    price: 1250000,
-    beds: 5,
-    baths: 3,
-    type: "House",
-    image: "https://picsum.photos/800/600?random=4",
-    description: "Spacious modern residence with premium finishes and double garage."
-  },
-  {
-    id: "p5",
-    title: "Stylish Investment Apartment",
-    suburb: "South Yarra",
-    price: 650000,
-    beds: 2,
-    baths: 2,
-    type: "Apartment",
-    image: "https://picsum.photos/800/600?random=5",
-    description: "An excellent investment opportunity in a highly desirable location."
-  },
-  {
-    id: "p6",
-    title: "Charming Family Townhouse",
-    suburb: "Richmond",
-    price: 890000,
-    beds: 3,
-    baths: 2,
-    type: "Townhouse",
-    image: "https://picsum.photos/800/600?random=6",
-    description: "Elegant townhouse with open-plan living and private outdoor space."
-  },
-  {
-    id: "p7",
-    title: "Executive Luxury Residence",
-    suburb: "Toorak",
-    price: 2200000,
-    beds: 5,
-    baths: 4,
-    type: "House",
-    image: "https://picsum.photos/800/600?random=7",
-    description: "Premium residence featuring exceptional architecture and luxury interiors."
-  },
-  {
-    id: "p8",
-    title: "Affordable First Home",
-    suburb: "Footscray",
-    price: 480000,
-    beds: 2,
-    baths: 1,
-    type: "Apartment",
-    image: "https://picsum.photos/800/600?random=8",
-    description: "A fantastic opportunity for first-home buyers and young professionals."
-  },
-  {
-    id: "p9",
-    title: "Family Home with Swimming Pool",
-    suburb: "Glen Waverley",
-    price: 1680000,
-    beds: 4,
-    baths: 3,
-    type: "House",
-    image: "https://picsum.photos/800/600?random=9",
-    description: "Beautiful family property with a swimming pool and generous living areas."
-  },
-  {
-    id: "p10",
-    title: "Modern Two Bedroom Townhouse",
-    suburb: "Coburg",
-    price: 710000,
-    beds: 2,
-    baths: 2,
-    type: "Townhouse",
-    image: "https://picsum.photos/800/600?random=10",
-    description: "Low-maintenance contemporary living with excellent local amenities."
-  }
+  { id:"p1", title:"3 Bed Townhouse with Courtyard", suburb:"Brunswick East", state:"VIC", postcode:"3057", price:780000, beds:3, baths:2, parking:1, type:"Townhouse", image:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85", description:"A beautifully renovated townhouse with a north-facing courtyard, warm timber finishes and easy access to local cafés and tram connections.", featured:true },
+  { id:"p2", title:"The Brighton Residence", suburb:"Brighton", state:"VIC", postcode:"3186", price:1450000, beds:4, baths:3, parking:2, type:"House", image:"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85", description:"A refined family home with generous proportions, landscaped gardens and beautifully considered indoor-outdoor living.", featured:true },
+  { id:"p3", title:"A Quiet City Sanctuary", suburb:"Melbourne CBD", state:"VIC", postcode:"3000", price:520000, beds:2, baths:1, parking:1, type:"Apartment", image:"https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&w=1200&q=85", description:"A light-filled contemporary apartment moments from the city's best dining, galleries and public transport.", featured:false },
+  { id:"p4", title:"Doncaster Family Haven", suburb:"Doncaster", state:"VIC", postcode:"3108", price:1250000, beds:5, baths:3, parking:2, type:"House", image:"https://images.unsplash.com/photo-1600566753086-00f18fb6b3ea?auto=format&fit=crop&w=1200&q=85", description:"A spacious modern residence with premium finishes, multiple living zones and room for the whole family.", featured:true },
+  { id:"p5", title:"South Yarra Light", suburb:"South Yarra", state:"VIC", postcode:"3141", price:650000, beds:2, baths:2, parking:1, type:"Apartment", image:"https://images.unsplash.com/photo-1600607687644-c7171b42498f?auto=format&fit=crop&w=1200&q=85", description:"An elegant apartment with a practical layout, generous natural light and an enviable lifestyle address.", featured:false },
+  { id:"p6", title:"Richmond Garden Townhouse", suburb:"Richmond", state:"VIC", postcode:"3121", price:890000, beds:3, baths:2, parking:1, type:"Townhouse", image:"https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?auto=format&fit=crop&w=1200&q=85", description:"A welcoming townhouse with open-plan living, a private outdoor retreat and a relaxed inner-city feel.", featured:false },
+  { id:"p7", title:"The Toorak Collection", suburb:"Toorak", state:"VIC", postcode:"3142", price:2200000, beds:5, baths:4, parking:2, type:"House", image:"https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1200&q=85", description:"A statement residence with architectural presence, beautiful entertaining spaces and a considered material palette.", featured:true },
+  { id:"p8", title:"Footscray First Home", suburb:"Footscray", state:"VIC", postcode:"3011", price:480000, beds:2, baths:1, parking:1, type:"Apartment", image:"https://images.unsplash.com/photo-1600210491892-03d54c0aaf87?auto=format&fit=crop&w=1200&q=85", description:"A smart and inviting home offering low-maintenance living close to cafés, markets and transport.", featured:false },
+  { id:"p9", title:"Glen Waverley Entertainer", suburb:"Glen Waverley", state:"VIC", postcode:"3150", price:1680000, beds:4, baths:3, parking:2, type:"House", image:"https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=85", description:"A generous family property with inviting living spaces, a sparkling pool and room to entertain.", featured:true },
+  { id:"p10", title:"Coburg Contemporary Villa", suburb:"Coburg", state:"VIC", postcode:"3058", price:710000, beds:2, baths:2, parking:1, type:"Villa", image:"https://images.unsplash.com/photo-1600566752355-35792bedcfea?auto=format&fit=crop&w=1200&q=85", description:"A beautifully balanced, low-maintenance home with contemporary interiors and excellent local amenities.", featured:false }
 ];
-
 export default properties;
