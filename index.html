@@ -110,8 +110,8 @@
         <p class="eyebrow light">LET'S START A CONVERSATION</p>
         <h2>Good things begin<br>with <em>hello.</em></h2>
         <p>Whether you're buying, selling or simply exploring what's possible, we'd love to hear from you.</p>
-        <a class="button button-light" id="contactWhatsApp" href="#" target="_blank" rel="noopener">Message our team <span>↗</span></a>
-        <div class="contact-meta"><span>Melbourne, Victoria, Australia</span><span>hello@havenandco.example</span></div>
+        <a class="button button-light" href="mailto:hello@havenandco.example?subject=Property%20enquiry">Email our team <span>↗</span></a>
+        <div class="contact-meta"><span>Melbourne, Victoria, Australia</span><a href="mailto:hello@havenandco.example">hello@havenandco.example</a></div>
       </div>
     </section>
   </main>
@@ -126,14 +126,31 @@
     <div class="modal-backdrop" data-close></div>
     <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
       <button class="modal-close" id="modalClose" aria-label="Close details">×</button>
-      <img id="modalImage" src="" alt="Property" />
+      <div class="detail-gallery">
+        <img id="modalImage" class="gallery-main" src="" alt="Property" />
+        <div class="gallery-thumbnails" id="galleryThumbnails" aria-label="Property photo gallery"></div>
+      </div>
       <div class="modal-content">
         <p class="eyebrow" id="modalSuburb"></p>
         <h2 id="modalTitle"></h2>
         <p class="modal-price" id="modalPrice"></p>
         <div class="modal-stats" id="modalStats"></div>
-        <p id="modalDescription"></p>
-        <div class="modal-actions"><a class="button button-dark" id="modalWhatsApp" href="#" target="_blank" rel="noopener">Enquire on WhatsApp ↗</a></div>
+        <h3 class="detail-heading">About this property</h3>
+        <p class="detail-description" id="modalDescription"></p>
+        <h3 class="detail-heading">Property features</h3>
+        <ul class="feature-list" id="modalFeatures"></ul>
+        <div class="detail-enquiry">
+          <h3>Interested in this property?</h3>
+          <p>Send an enquiry and our team will be in touch.</p>
+          <form id="propertyEnquiryForm">
+            <div class="form-row"><label for="enquiryName">YOUR NAME</label><input id="enquiryName" name="name" autocomplete="name" placeholder="Full name" required></div>
+            <div class="form-row"><label for="enquiryEmail">EMAIL ADDRESS</label><input id="enquiryEmail" name="email" type="email" autocomplete="email" placeholder="you@example.com" required></div>
+            <div class="form-row"><label for="enquiryPhone">PHONE (OPTIONAL)</label><input id="enquiryPhone" name="phone" type="tel" autocomplete="tel" placeholder="Your phone number"></div>
+            <div class="form-row"><label for="enquiryMessage">MESSAGE</label><textarea id="enquiryMessage" name="message" rows="3">I'd like to know more about this property and arrange an inspection.</textarea></div>
+            <button class="button button-dark" type="submit">Send property enquiry <span>↗</span></button>
+          </form>
+          <p class="form-note">Your email app will open with the enquiry ready to send.</p>
+        </div>
       </div>
     </div>
   </div>
