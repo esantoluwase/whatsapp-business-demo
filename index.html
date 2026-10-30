@@ -1,51 +1,142 @@
-<!doctype html>
-<html lang="en">
+<!DOCTYPE html>
+<html lang="en-AU">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="description" content="Home-style cooking, freshly prepared every day at Olive & Ember.">
-<title>Olive &amp; Ember | Home-style cooking in Ikeja</title>
-<style>
-:root{--accent:#a34d2d;--ink:#241e19;--muted:#6d6259;--paper:#fffdf9;--line:#eee5dc}
-*{box-sizing:border-box}body{margin:0;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:var(--paper);line-height:1.5}
-a{color:inherit}.wrap{width:min(1100px,92%);margin:auto}.top{position:sticky;top:0;background:#fffdf9f2;border-bottom:1px solid var(--line);z-index:5}.nav{display:flex;justify-content:space-between;align-items:center;padding:14px 0;gap:12px}.brand{font-weight:800;text-decoration:none;font-size:1.1rem}.btn{display:inline-block;background:var(--accent);color:white;text-decoration:none;padding:12px 17px;border-radius:8px;font-weight:700}.btn.secondary{background:transparent;color:var(--accent);border:1px solid var(--accent)}.hero{display:grid;grid-template-columns:1fr 1fr;gap:34px;align-items:center;padding:48px 0}.hero img{width:100%;height:360px;object-fit:cover;border-radius:16px}.eyebrow{color:var(--accent);font-weight:700}.hero h1{font-size:clamp(2.2rem,5vw,4rem);line-height:1.05;letter-spacing:-.04em;margin:.5rem 0 1rem}.section{padding:38px 0}.section h2{font-size:2rem;margin:0 0 8px}.sub{color:var(--muted);margin-top:0}.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:22px}.dish{border:1px solid var(--line);border-radius:14px;overflow:hidden;background:white}.dish img{width:100%;height:190px;object-fit:cover;display:block}.dishbody{padding:15px}.dish h3{font-size:1.05rem;margin:0 0 6px}.price{font-weight:800;color:var(--accent);margin:0 0 5px}.dish p{margin:0;color:var(--muted);font-size:.95rem}.about{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:center;background:#f6eee5;border-radius:16px;padding:24px}.about img{width:100%;height:260px;object-fit:cover;border-radius:12px}.details{display:grid;grid-template-columns:1fr 1fr;gap:24px}.hours{border-collapse:collapse;width:100%}.hours td{padding:9px 0;border-bottom:1px solid var(--line)}iframe{width:100%;height:240px;border:0;border-radius:12px}.reviews:empty{display:none}footer{padding:28px 0;margin-top:30px;border-top:1px solid var(--line)}.foot{display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}.links{display:flex;gap:15px;flex-wrap:wrap}
-@media(max-width:700px){.hero,.about,.details{grid-template-columns:1fr}.hero{padding:28px 0}.hero img{height:240px}.menu{grid-template-columns:1fr}.dish img{height:220px}.section{padding:28px 0}}
-@media(min-width:701px) and (max-width:900px){.menu{grid-template-columns:repeat(2,1fr)}}
-</style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#f5f3ee" />
+  <meta name="description" content="Discover exceptional homes with Haven & Co. Explore considered properties across Melbourne, Australia." />
+  <title>Haven & Co. — Exceptional Property, Considered</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<header class="top"><div class="wrap nav"><a class="brand" href="#" id="brand">Olive &amp; Ember</a><a class="btn" id="topWhatsApp" href="https://wa.me/2348137240707" target="_blank" rel="noopener">Order on WhatsApp</a></div></header>
-<main class="wrap">
-<section class="hero"><div><div class="eyebrow">FRESHLY MADE, EVERY DAY</div><h1 id="headline">Home-style cooking, fresh every morning in Ikeja</h1><p id="heroIntro">Fresh favourites, made with care and ready to enjoy.</p><a class="btn" id="heroWhatsApp" href="https://wa.me/2348137240707" target="_blank" rel="noopener">Order on WhatsApp</a> <a class="btn secondary" href="#menu">See the menu</a></div><img loading="lazy" src="https://images.unsplash.com/photo-1547592180-85f173990554?auto=format&fit=crop&w=1000&q=75" alt="Freshly prepared food"></section>
-<section class="section" id="menu"><h2>Our menu</h2><p class="sub">Six favourites, freshly prepared.</p><div class="menu" id="menuItems">
-<article class="dish"><img loading="lazy" src="https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=700&q=75" alt="Grilled chicken, rice and salad"><div class="dishbody"><h3>Grilled chicken, rice and salad</h3><div class="price">₦4,500</div><p>Grilled chicken with rice and fresh salad.</p></div></article>
-<article class="dish"><img loading="lazy" src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=75" alt="Smoky beef burger with fries"><div class="dishbody"><h3>Smoky beef burger with fries</h3><div class="price">₦3,800</div><p>Smoky beef burger served with golden fries.</p></div></article>
-<article class="dish"><img loading="lazy" src="https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=700&q=75" alt="Peppered beef skewers"><div class="dishbody"><h3>Peppered beef skewers</h3><div class="price">₦3,000</div><p>Three tender beef skewers with pepper sauce.</p></div></article>
-<article class="dish"><img loading="lazy" src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=75" alt="Pasta in tomato and basil"><div class="dishbody"><h3>Pasta in tomato and basil</h3><div class="price">₦3,200</div><p>Pasta in a fresh tomato and basil sauce.</p></div></article>
-<article class="dish"><img loading="lazy" src="https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=700&q=75" alt="Beans and fried plantain"><div class="dishbody"><h3>Beans and fried plantain</h3><div class="price">₦2,200</div><p>Beans served with sweet fried plantain.</p></div></article>
-<article class="dish"><img loading="lazy" src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=75" alt="Chocolate cake"><div class="dishbody"><h3>Chocolate cake</h3><div class="price">₦1,800</div><p>A rich slice of soft chocolate cake.</p></div></article>
-</div></section>
-<section class="section"><div class="about"><div><div class="eyebrow">A LITTLE ABOUT US</div><h2>Made with care, served with heart</h2><p id="aboutText">We started cooking for neighbours who kept coming back. We still cook the same way, just more of it.</p></div><img loading="lazy" src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?auto=format&fit=crop&w=900&q=75" alt="A welcoming home kitchen"></div></section>
-<section class="section"><h2>Visit or get in touch</h2><div class="details"><div><h3>Opening hours</h3><table class="hours" id="hours"><tr><td>Monday–Friday</td><td>8:00 AM – 8:00 PM</td></tr><tr><td>Saturday</td><td>9:00 AM – 6:00 PM</td></tr><tr><td>Sunday</td><td>Closed</td></tr></table><p><strong>Address:</strong> <span id="address">Ikeja City Mall area, Alausa, Ikeja, Lagos</span></p><a class="btn secondary" id="directions" href="https://www.google.com/maps/search/?api=1&amp;query=Ikeja%2C%20Lagos%2C%20Nigeria" target="_blank" rel="noopener">Get directions</a></div><div id="mapWrap"><iframe loading="lazy" title="Map of Ikeja, Lagos" src="https://maps.google.com/maps?q=Ikeja%2C%20Lagos%2C%20Nigeria&amp;output=embed"></iframe></div></div></section>
-<section class="section reviews" id="reviews"></section>
-</main>
-<footer><div class="wrap foot"><strong id="footerName">Olive &amp; Ember</strong><div class="links"><a id="footerInstagram" href="https://www.instagram.com/" target="_blank" rel="noopener">Instagram</a><a id="footerWhatsApp" href="https://wa.me/2348137240707" target="_blank" rel="noopener">WhatsApp</a><span id="footerAddress">Ikeja City Mall area, Alausa, Ikeja, Lagos</span></div></div></footer>
-<script src="data.js"></script>
-<script>
-const waNumber = BUSINESS.whatsappNumber.replace(/\D/g, "");
-const wa = "https://wa.me/" + waNumber;
-const setText=(id,value)=>document.getElementById(id).textContent=value;
-document.title=BUSINESS.name+" | Home-style cooking in "+BUSINESS.city;
-["brand","footerName"].forEach(id=>setText(id,BUSINESS.name));
-setText("headline",BUSINESS.headline);setText("aboutText",BUSINESS.about);
-["topWhatsApp","heroWhatsApp","footerWhatsApp"].forEach(id=>{const a=document.getElementById(id);a.href=wa;a.target="_blank";a.rel="noopener";});
-setText("address",BUSINESS.address);setText("footerAddress",BUSINESS.address);
-const ig=document.getElementById("footerInstagram");ig.href=BUSINESS.instagramUrl; 
-const query=BUSINESS.mapQuery;
-document.getElementById("mapWrap").innerHTML='<iframe loading="lazy" title="Business location" src="https://maps.google.com/maps?q='+encodeURIComponent(query)+'&output=embed"></iframe>';
-document.getElementById("directions").href="https://www.google.com/maps/search/?api=1&query="+encodeURIComponent(query);
-document.getElementById("menuItems").innerHTML=BUSINESS.menu.map(item=>`<article class="dish"><img loading="lazy" src="${item.image}" alt="${item.name}"><div class="dishbody"><h3>${item.name}</h3><div class="price">${formatPrice(item.price)}</div><p>${item.description}</p></div></article>`).join("");
-document.getElementById("hours").innerHTML=BUSINESS.hours.map(row=>`<tr><td>${row[0]}</td><td>${row[1]}</td></tr>`).join("");
-if(BUSINESS.reviews.length){document.getElementById("reviews").innerHTML="<h2>What customers say</h2>"+BUSINESS.reviews.map(r=>`<blockquote>“${r.quote}”<br><strong>— ${r.name}</strong></blockquote>`).join("");}
-</script>
-</body></html>
+  <div class="announcement">A considered approach to finding your next home <span>—</span> Melbourne, Australia</div>
+  <header class="site-header">
+    <a class="brand" href="#" aria-label="Haven and Co home"><span class="brand-mark">H</span><span>HAVEN <i>&</i> CO.</span></a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">☰</button>
+    <nav class="main-nav" id="mainNav">
+      <a href="#properties">Buy</a>
+      <a href="#properties">Rent</a>
+      <a href="#sell">Sell</a>
+      <a href="#about">Our story</a>
+      <a class="nav-contact" href="#contact">Get in touch <span>↗</span></a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="hero-image"></div>
+      <div class="hero-shade"></div>
+      <div class="hero-content">
+        <p class="eyebrow light">PROPERTY, WITH PERSPECTIVE</p>
+        <h1>Find a place<br>to call <em>extraordinary.</em></h1>
+        <p class="hero-copy">Thoughtful homes. Remarkable spaces.<br>A more considered way to move.</p>
+        <a class="button button-light" href="#properties">Explore properties <span>↗</span></a>
+      </div>
+      <div class="hero-caption"><span>01 / 03</span><span>Architecture that feels like home</span></div>
+    </section>
+
+    <section class="intro section-wrap">
+      <p class="eyebrow">THE HAVEN DIFFERENCE</p>
+      <div class="intro-grid">
+        <h2>More than an address.<br><em>A feeling.</em></h2>
+        <p>We believe the right home changes how you live. From quiet neighbourhood streets to considered architectural spaces, we bring people and places together with care, clarity and local knowledge.</p>
+      </div>
+    </section>
+
+    <section class="properties-section section-wrap" id="properties">
+      <div class="section-heading">
+        <div><p class="eyebrow">A PLACE TO BEGIN</p><h2>Discover our <em>properties.</em></h2></div>
+        <a class="text-link" href="#propertyGrid">View all properties <span>↗</span></a>
+      </div>
+
+      <div class="search-panel">
+        <div class="search-field location-field">
+          <label for="locationSearch">LOCATION</label>
+          <input id="locationSearch" type="search" placeholder="Suburb, city or postcode">
+        </div>
+        <div class="search-field">
+          <label for="typeFilter">PROPERTY TYPE</label>
+          <select id="typeFilter">
+            <option value="">Any type</option>
+            <option>House</option><option>Apartment</option><option>Townhouse</option><option>Villa</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label for="bedFilter">BEDROOMS</label>
+          <select id="bedFilter">
+            <option value="">Any</option><option value="1">1+</option><option value="2">2+</option><option value="3">3+</option><option value="4">4+</option><option value="5">5+</option>
+          </select>
+        </div>
+        <div class="search-field">
+          <label for="priceFilter">MAXIMUM PRICE</label>
+          <select id="priceFilter">
+            <option value="">No maximum</option>
+            <option value="600000">$600,000</option><option value="800000">$800,000</option><option value="1000000">$1,000,000</option><option value="1500000">$1,500,000</option><option value="2000000">$2,000,000</option>
+          </select>
+        </div>
+        <button class="button button-dark search-button" id="searchButton">Search <span>→</span></button>
+      </div>
+
+      <div class="results-bar"><p id="resultsCount">10 properties to explore</p><div class="sort-control"><label for="sortFilter">SORT BY</label><select id="sortFilter"><option value="featured">Featured</option><option value="low">Price: low to high</option><option value="high">Price: high to low</option></select></div></div>
+      <div class="property-grid" id="propertyGrid"></div>
+      <p class="no-results" id="noResults" hidden>No properties match those filters. Try widening your search.</p>
+    </section>
+
+    <section class="feature-band" id="sell">
+      <div class="feature-image"></div>
+      <div class="feature-copy">
+        <p class="eyebrow light">THINKING OF SELLING?</p>
+        <h2>Your next chapter<br>starts with the <em>right people.</em></h2>
+        <p>Good property advice begins with listening. Tell us about your plans and we'll help you take the next step with confidence.</p>
+        <a class="button button-outline-light" href="#contact">Talk to our team <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="about-section section-wrap" id="about">
+      <div class="about-photo"></div>
+      <div class="about-copy">
+        <p class="eyebrow">A MORE HUMAN APPROACH</p>
+        <h2>Property is personal.<br><em>We make it feel that way.</em></h2>
+        <p>Haven & Co. is an independent property agency built around the belief that every move deserves attention. We pair thoughtful service with a deep appreciation for design, place and the people who bring a home to life.</p>
+        <a class="text-link" href="#contact">Get to know us <span>↗</span></a>
+      </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+      <div class="contact-inner">
+        <p class="eyebrow light">LET'S START A CONVERSATION</p>
+        <h2>Good things begin<br>with <em>hello.</em></h2>
+        <p>Whether you're buying, selling or simply exploring what's possible, we'd love to hear from you.</p>
+        <a class="button button-light" id="contactWhatsApp" href="#" target="_blank" rel="noopener">Message our team <span>↗</span></a>
+        <div class="contact-meta"><span>Melbourne, Victoria, Australia</span><span>hello@havenandco.example</span></div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <a class="brand footer-brand" href="#"><span class="brand-mark">H</span><span>HAVEN <i>&</i> CO.</span></a>
+    <p>Exceptional property, considered.</p>
+    <span>© <span id="year"></span> Haven & Co. <small>Demo website — sample listings and contact details.</small></span>
+  </footer>
+
+  <div class="modal" id="propertyModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <button class="modal-close" id="modalClose" aria-label="Close details">×</button>
+      <img id="modalImage" src="" alt="Property" />
+      <div class="modal-content">
+        <p class="eyebrow" id="modalSuburb"></p>
+        <h2 id="modalTitle"></h2>
+        <p class="modal-price" id="modalPrice"></p>
+        <div class="modal-stats" id="modalStats"></div>
+        <p id="modalDescription"></p>
+        <div class="modal-actions"><a class="button button-dark" id="modalWhatsApp" href="#" target="_blank" rel="noopener">Enquire on WhatsApp ↗</a></div>
+      </div>
+    </div>
+  </div>
+  <script type="module" src="script.js"></script>
+</body>
+</html>
