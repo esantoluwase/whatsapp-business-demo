@@ -1,30 +1,115 @@
-// Olive & Ember demo content. Replace the demo contact details with the prospect's verified details before sending.
-const BUSINESS = {
-  name: "Olive & Ember",
-  city: "Ikeja",
-  headline: "Home-style cooking, fresh every morning in Ikeja",
-  about: "We started cooking for neighbours who kept coming back. We still cook the same way, just more of it.",
-  currency: "₦",
-    whatsappNumber: "2348137240707",
-  address: "Ikeja City Mall area, Alausa, Ikeja, Lagos",
-  mapQuery: "Ikeja City Mall, Alausa, Ikeja, Lagos",
-  instagramUrl: "https://www.instagram.com/",
-  hours: [
-    ["Monday–Friday", "8:00 AM – 8:00 PM"],
-    ["Saturday", "9:00 AM – 6:00 PM"],
-    ["Sunday", "Closed"]
-  ],
-  menu: [
-    { name: "Grilled chicken, rice and salad", price: 4500, description: "Grilled chicken with rice and fresh salad.", image: "https://images.unsplash.com/photo-1532550907401-a500c9a57435?auto=format&fit=crop&w=700&q=75" },
-    { name: "Smoky beef burger with fries", price: 3800, description: "Smoky beef burger served with golden fries.", image: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=700&q=75" },
-    { name: "Peppered beef skewers", price: 3000, description: "Three tender beef skewers with pepper sauce.", image: "https://images.unsplash.com/photo-1529692236671-f1f6cf9683ba?auto=format&fit=crop&w=700&q=75" },
-    { name: "Pasta in tomato and basil", price: 3200, description: "Pasta in a fresh tomato and basil sauce.", image: "https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=700&q=75" },
-    { name: "Beans and fried plantain", price: 2200, description: "Beans served with sweet fried plantain.", image: "https://images.unsplash.com/photo-1512058564366-18510be2db19?auto=format&fit=crop&w=700&q=75" },
-    { name: "Chocolate cake", price: 1800, description: "A rich slice of soft chocolate cake.", image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587?auto=format&fit=crop&w=700&q=75" }
-  ],
-  reviews: []
-};
 
-function formatPrice(amount) {
-  return `${BUSINESS.currency}${amount.toLocaleString("en-NG")}`;
-}
+const properties = [
+  {
+    id: "p1",
+    title: "3 Bed Townhouse with Courtyard",
+    suburb: "Brunswick East",
+    price: 780000,
+    beds: 3,
+    baths: 2,
+    type: "Townhouse",
+    image: "https://picsum.photos/800/600?random=1",
+    description: "Renovated townhouse, north-facing courtyard, walk to the tram."
+  },
+  {
+    id: "p2",
+    title: "Luxury Family Home",
+    suburb: "Brighton",
+    price: 1450000,
+    beds: 4,
+    baths: 3,
+    type: "House",
+    image: "https://picsum.photos/800/600?random=2",
+    description: "Beautiful family home with spacious interiors and a landscaped garden."
+  },
+  {
+    id: "p3",
+    title: "Modern City Apartment",
+    suburb: "Melbourne CBD",
+    price: 520000,
+    beds: 2,
+    baths: 1,
+    type: "Apartment",
+    image: "https://picsum.photos/800/600?random=3",
+    description: "Contemporary apartment close to shopping, restaurants and transport."
+  },
+  {
+    id: "p4",
+    title: "Contemporary 5 Bedroom Residence",
+    suburb: "Doncaster",
+    price: 1250000,
+    beds: 5,
+    baths: 3,
+    type: "House",
+    image: "https://picsum.photos/800/600?random=4",
+    description: "Spacious modern residence with premium finishes and double garage."
+  },
+  {
+    id: "p5",
+    title: "Stylish Investment Apartment",
+    suburb: "South Yarra",
+    price: 650000,
+    beds: 2,
+    baths: 2,
+    type: "Apartment",
+    image: "https://picsum.photos/800/600?random=5",
+    description: "An excellent investment opportunity in a highly desirable location."
+  },
+  {
+    id: "p6",
+    title: "Charming Family Townhouse",
+    suburb: "Richmond",
+    price: 890000,
+    beds: 3,
+    baths: 2,
+    type: "Townhouse",
+    image: "https://picsum.photos/800/600?random=6",
+    description: "Elegant townhouse with open-plan living and private outdoor space."
+  },
+  {
+    id: "p7",
+    title: "Executive Luxury Residence",
+    suburb: "Toorak",
+    price: 2200000,
+    beds: 5,
+    baths: 4,
+    type: "House",
+    image: "https://picsum.photos/800/600?random=7",
+    description: "Premium residence featuring exceptional architecture and luxury interiors."
+  },
+  {
+    id: "p8",
+    title: "Affordable First Home",
+    suburb: "Footscray",
+    price: 480000,
+    beds: 2,
+    baths: 1,
+    type: "Apartment",
+    image: "https://picsum.photos/800/600?random=8",
+    description: "A fantastic opportunity for first-home buyers and young professionals."
+  },
+  {
+    id: "p9",
+    title: "Family Home with Swimming Pool",
+    suburb: "Glen Waverley",
+    price: 1680000,
+    beds: 4,
+    baths: 3,
+    type: "House",
+    image: "https://picsum.photos/800/600?random=9",
+    description: "Beautiful family property with a swimming pool and generous living areas."
+  },
+  {
+    id: "p10",
+    title: "Modern Two Bedroom Townhouse",
+    suburb: "Coburg",
+    price: 710000,
+    beds: 2,
+    baths: 2,
+    type: "Townhouse",
+    image: "https://picsum.photos/800/600?random=10",
+    description: "Low-maintenance contemporary living with excellent local amenities."
+  }
+];
+
+export default properties;
