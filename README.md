@@ -1,25 +1,22 @@
-# Olive & Ember — WhatsApp-first small business demo
+# Haven & Co. — Luxury Real Estate Demo
 
-This demo includes a menu section, direct WhatsApp ordering, opening hours, map and contact details.
-
-## Important before pitching
-The phone and WhatsApp number shown are demo values, not a real business contact. Replace them with the prospect's verified number before sending the link. The address is a general Ikeja location, not a verified storefront address. Replace it with the business's exact address if known.
+A responsive, static luxury real-estate agency website for an Australian (Melbourne/VIC) demo.
 
 ## Files
-- `index.html`: website page.
-- `data.js`: menu, prices, brand copy and contact details in one place.
+- `index.html` — page structure
+- `style.css` — responsive styling
+- `data.js` — sample property listings
+- `script.js` — search, filters, sorting, property details and WhatsApp enquiry actions
 
-## Deploy
-Upload `index.html`, `data.js`, and this README to the root of a GitHub repository. In Settings → Pages, select Deploy from a branch, choose `main` and `/(root)`, and save.
+## Run locally
+Because the JavaScript uses ES modules, serve the folder with a local web server (for example, VS Code Live Server) rather than opening `index.html` directly.
 
-## WhatsApp and demo location
-The WhatsApp buttons are configured to open `https://wa.me/2348137240707`. The number is intentionally not printed as visible page text. Confirm that this number is yours and that WhatsApp is active before sharing the site with prospects; anyone clicking the buttons will be sent to that account.
+## Customise before using for a real agency
+1. In `script.js`, replace `WHATSAPP_NUMBER` with the agency's WhatsApp number in international format, digits only.
+2. Replace the sample listings in `data.js` with accurate, authorised property information and photos.
+3. Update the agency email, address and branding in `index.html`.
+4. Replace the `.example` email address and sample copy.
+5. Confirm property price advertising complies with the relevant Australian state or territory rules. These listings are demo content only and are not real offers for sale.
 
-The displayed location is labelled as a demo area near Ikeja City Mall, Alausa, Ikeja, Lagos. It is not a claim that Olive & Ember operates from a verified storefront there. Replace it with the business's confirmed address before using this as a real restaurant website.
-
-
-## Final checks
-- The menu section is present in `index.html` with `id="menu"` and six menu items.
-- “See the menu” links to `#menu`.
-- WhatsApp buttons use the number configured in `data.js`; it is not printed as visible page text.
-- The location shown is an area-level location, not a verified storefront address. Confirm the restaurant's actual address before using this for a real business.
+## Publish
+Upload the four website files to the root of your GitHub repository. Enable GitHub Pages in repository Settings → Pages and select the main branch/root folder.
